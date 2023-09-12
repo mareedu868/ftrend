@@ -11,14 +11,6 @@ environment {
         stage('build') {
             steps {
                 echo "Source code downloaded "
-                echo ".
-                .
-                .
-                .
-                .
-                .
-                .
-                ."
                 echo "---------Build Started----------"
                 sh "mvn clean deploy -Dmaven.test.skip=true"
                 echo "---------Build Completed----------"
