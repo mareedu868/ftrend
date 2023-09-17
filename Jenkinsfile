@@ -1,5 +1,5 @@
 def registry = 'https://mydevopslearningonline.jfrog.io'
-def imageName = 'mydevopslearningonline.jfrog.io/valaxy-docker/ftrend'
+def imageName = 'mydevopslearningonline.jfrog.io/valaxy-docker-local/ftrend'
 def version   = '2.1.2'
 pipeline {
     agent {
@@ -96,7 +96,7 @@ environment {
             steps {
                 script {
                     echo '<--------------- Docker Publish Started --------------->'  
-                    docker.withRegistry(registry, 'artifactory_token'){
+                    docker.withRegistry(registry, 'Artifact-credentials'){
                     app.push()
                     }    
                     echo '<--------------- Docker Publish Ended --------------->'  
